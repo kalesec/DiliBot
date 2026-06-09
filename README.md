@@ -1,4 +1,5 @@
-# DiliBot — Raid Signup Auditor
+# DiliBot
+## Raid-Helper Signup Auditor
 
 DiliBot is a Discord bot that audits raid signups by comparing members with the **Raider** role against signups on a Raid-Helper event. It quickly identifies who has not signed up for a raid.
 
