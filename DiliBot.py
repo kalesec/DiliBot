@@ -40,14 +40,12 @@ async def audit(interaction: discord.Interaction, raid_id: str):
                 return
             data = await response.json()
 
-    excluded_statuses = {"bench", "tentative", "absence", "late"}
+    
     signed_up_ids = set()
     for signup in data.get("signUps", []):
-        status = signup.get("cClassName", "").lower()
-        if status not in excluded_statuses:
-            user_id = signup.get("userId")
-            if user_id:
-                signed_up_ids.add(str(user_id))
+        user_id = signup.get("userId")
+        if user_id:
+            signed_up_ids.add(str(user_id))
 
     print(f"Signed up user IDs: {signed_up_ids}")
 
