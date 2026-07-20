@@ -1,2 +1,10 @@
 # Remove .env from version control to protect bot token
 .env
+
+# Local virtualenv used for running the Lambda tests
+.venv/
+__pycache__/
+
+# Lambda build output -- regenerate with lambda/build.ps1
+lambda/build/
+lambda/dist/
